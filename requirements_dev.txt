@@ -1,0 +1,4 @@
+pur
+black[jupyter]
+pylint
+dockerignore-generate
