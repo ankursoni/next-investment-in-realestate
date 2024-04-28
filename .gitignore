@@ -1,0 +1,6 @@
+.DS_Store
+?*-secret*
+*.pem
+logs/
+# local/
+output/
