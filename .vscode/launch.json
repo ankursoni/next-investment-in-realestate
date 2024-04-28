@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: API Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "core.api",
+            "env": {
+                "SQLITE_CONNECTION_STRING": "sqlite+pysqlite:///local/local.sqlite3"
+            },
+            "args": [
+                "--debug-mode=true",
+                "--api-port=8080",
+                // "--api-reload=true",
+                "--data-repository-type=sqlite",
+                "--data-source-type=realestate",
+                "--run-db-migrations=true"
+            ]
+        },
+        {
+            "name": "Python: Main Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "core.main",
+            "env": {
+                "SQLITE_CONNECTION_STRING": "sqlite+pysqlite:///local/local.sqlite3"
+            },
+            "args": [
+                "--debug-mode=true",
+                "--data-repository-type=sqlite",
+                "--data-source-type=realestate",
+                "--run-db-migrations=true"
+            ]
+        },
+        {
+            "name": "Python: pytest",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                // "--cov=core",
+                // "-v"
+            ]
+        }
+    ]
+}
