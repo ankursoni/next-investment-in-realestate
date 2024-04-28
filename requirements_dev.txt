@@ -1,0 +1,4 @@
+pur
+black
+pylint
+dockerignore-generate
