@@ -24,69 +24,91 @@ def main() -> None:
         [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
         3,
         400000,
-        550000,
-        City.ADELAIDE,
-        State.SA,
+        625000,
+        City.MELBOURNE,
+        State.VIC,
     )
     for property in properties:
         provider.PROVIDERS.data_repository.save_property(property)
-    properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
-        ListingType.BUY,
-        [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
-        3,
-        400000,
-        550000,
-        City.PERTH,
-        State.WA,
-    )
-    for property in properties:
-        provider.PROVIDERS.data_repository.save_property(property)
-    properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
-        ListingType.BUY,
-        [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
-        3,
-        400000,
-        550000,
-        City.BRISBANE,
-        State.QLD,
-    )
-    for property in properties:
-        provider.PROVIDERS.data_repository.save_property(property)
+    # properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
+    #     ListingType.BUY,
+    #     [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
+    #     3,
+    #     400000,
+    #     550000,
+    #     City.ADELAIDE,
+    #     State.SA,
+    # )
+    # for property in properties:
+    #     provider.PROVIDERS.data_repository.save_property(property)
+    # properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
+    #     ListingType.BUY,
+    #     [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
+    #     3,
+    #     400000,
+    #     550000,
+    #     City.PERTH,
+    #     State.WA,
+    # )
+    # for property in properties:
+    #     provider.PROVIDERS.data_repository.save_property(property)
+    # properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
+    #     ListingType.BUY,
+    #     [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
+    #     3,
+    #     400000,
+    #     550000,
+    #     City.BRISBANE,
+    #     State.QLD,
+    # )
+    # for property in properties:
+    #     provider.PROVIDERS.data_repository.save_property(property)
 
     # rent
     properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
         ListingType.RENT,
         [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
         3,
-        500,
+        400,
         None,
-        City.ADELAIDE,
-        State.SA,
+        City.MELBOURNE,
+        State.VIC,
     )
     for property in properties:
         provider.PROVIDERS.data_repository.save_property(property)
-    properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
-        ListingType.RENT,
-        [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
-        3,
-        500,
-        None,
-        City.PERTH,
-        State.WA,
-    )
-    for property in properties:
-        provider.PROVIDERS.data_repository.save_property(property)
-    properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
-        ListingType.RENT,
-        [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
-        3,
-        500,
-        None,
-        City.BRISBANE,
-        State.QLD,
-    )
-    for property in properties:
-        provider.PROVIDERS.data_repository.save_property(property)
+    # properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
+    #     ListingType.RENT,
+    #     [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
+    #     3,
+    #     500,
+    #     None,
+    #     City.ADELAIDE,
+    #     State.SA,
+    # )
+    # for property in properties:
+    #     provider.PROVIDERS.data_repository.save_property(property)
+    # properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
+    #     ListingType.RENT,
+    #     [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
+    #     3,
+    #     500,
+    #     None,
+    #     City.PERTH,
+    #     State.WA,
+    # )
+    # for property in properties:
+    #     provider.PROVIDERS.data_repository.save_property(property)
+    # properties = provider.PROVIDERS.data_source_wrapper.get_property_listing(
+    #     ListingType.RENT,
+    #     [PropertyType.HOUSE, PropertyType.TOWNHOUSE],
+    #     3,
+    #     500,
+    #     None,
+    #     City.BRISBANE,
+    #     State.QLD,
+    # )
+    # for property in properties:
+    #     provider.PROVIDERS.data_repository.save_property(property)
 
 
 def init() -> None:

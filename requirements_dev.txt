@@ -1,4 +1,4 @@
 pur
-black
+black[jupyter]
 pylint
 dockerignore-generate
